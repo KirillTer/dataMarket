@@ -5,10 +5,14 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
+import SearchImage from '../../../assets/Search.png';
+
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
-    height: '4rem',
+    height: '34rem',
+    backgroundImage: `url(${SearchImage})`,
+    backgroundSize: 'contain'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -19,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const NavigationPanelView = () => {
+const SearchPanelView = () => {
   const classes = useStyles();
 
   return(
@@ -27,7 +31,7 @@ const NavigationPanelView = () => {
       <Toolbar>
         <Typography variant="h6" noWrap className={classes.title}>
           <Link component={RouterLink} to="/main">
-            Navigation Panel
+            {/* Search Panel */}
           </Link>
         </Typography>
       </Toolbar>
@@ -35,4 +39,4 @@ const NavigationPanelView = () => {
   )
 }
 
-export default NavigationPanelView
+export default SearchPanelView

@@ -5,12 +5,15 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
+import MainImage from '../../../assets/Main.png';
+
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
-    height: '80rem',
+    height: '30rem',
     width: '100%',
-    backgroundColor: 'white'
+    backgroundImage: `url(${MainImage})`,
+    backgroundSize: 'contain'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -29,7 +32,7 @@ const HeaderView = () => {
       <Toolbar>
         <Typography variant="h6" noWrap className={classes.title}>
           <Link component={RouterLink} to="/main">
-            Main Container
+            {/* Main Container */}
           </Link>
         </Typography>
       </Toolbar>

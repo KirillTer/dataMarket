@@ -1,25 +1,48 @@
 import React from 'react';
 import { Link as RouterLink } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+
+import LogoImage from '../../../assets/Logo.png';
+import BasketImage from '../../../assets/Basket.png';
+import BellImage from '../../../assets/Bell.png';
 
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     height: '4rem',
-    backgroundColor: 'grey'
+    backgroundColor: '#373737',
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
+  logo: {
+    height: '4rem',
+    width: '100%',
+    backgroundImage: `url(${LogoImage})`,
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat'
+  },
+  basket: {
+    height: '4rem',
+    width: '5rem',
+    backgroundImage: `url(${BasketImage})`,
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat'
+  },
+  bell: {
+    height: '4rem',
+    width: '5rem',
+    backgroundImage: `url(${BellImage})`,
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat'
   },
   title: {
-    flexGrow: 1,
-  },
-  white: {
+    height: '4rem',
+    width: '20rem',
+    padding: 'auto 0',
     color: 'white',
-  },
+    fontSize: '2rem',
+    textAlign: 'center',
+    verticalAlign: 'baseline'
+  }
 }));
 
 
@@ -28,13 +51,16 @@ const HeaderView = () => {
 
   return(
     <div className={classes.root}>
-      <Toolbar>
-        <Typography variant="h6" noWrap className={classes.title}>
-          <Link component={RouterLink} to="/main" className={classes.white}>
-            Header
-          </Link>
-        </Typography>
-      </Toolbar>
+      <Link component={RouterLink} to="/main" className={classes.logo}>
+        {/* Header */}
+      </Link>
+      <Link component={RouterLink} to="/main" className={classes.bell}>
+        {/* Header */}
+      </Link>
+      <Link component={RouterLink} to="/main" className={classes.basket}>
+        {/* Header */}
+      </Link>
+      <div className={classes.title}><span>Data Marketplace</span></div>
     </div>
   )
 }
