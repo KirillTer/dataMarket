@@ -1,12 +1,10 @@
 import {connect} from "react-redux";
 import { LOAD_MAIN_START } from '../../store/actionTypes'
-import { getMainSelector } from '../../store/selectors'
 import FirstPageView from "./FirstPage";
 
 
 const mapStateToProps = (state) => {
   return {
-    mainData: getMainSelector(state)
   };
 };
 

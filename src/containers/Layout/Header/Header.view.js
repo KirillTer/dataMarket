@@ -52,13 +52,13 @@ const HeaderView = () => {
   return(
     <div className={classes.root}>
       <Link component={RouterLink} to="/main" className={classes.logo}>
-        {/* Header */}
+        &#8203;
       </Link>
       <Link component={RouterLink} to="/main" className={classes.bell}>
-        {/* Header */}
+        &#8203;
       </Link>
       <Link component={RouterLink} to="/main" className={classes.basket}>
-        {/* Header */}
+        &#8203;
       </Link>
       <div className={classes.title}><span>Data Marketplace</span></div>
     </div>

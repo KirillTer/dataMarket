@@ -29,7 +29,7 @@ const NavigationPanelView = (props) => {
         textColor="primary"
         onChange={handleChange}
       >
-        {props.tabs && props.tabs.map(item => <Tab label={item}  className={classes.label}/>)}
+        {props.tabs && props.tabs.map(item => <Tab label={item} key={item} className={classes.label}/>)}
       </Tabs>
     </div>
   )
