@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link as RouterLink } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
+import { history } from "../../../store/configureStore";
 import { makeStyles } from '@material-ui/core/styles';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import SearchIcon from '@material-ui/icons/Search';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import TextField from '@material-ui/core/TextField';
 
 import SearchImage from '../../../assets/Search.png';
 
@@ -12,29 +13,49 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     height: '34rem',
     backgroundImage: `url(${SearchImage})`,
-    backgroundSize: 'contain'
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat'
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
+  search: {
+    height: '4rem',
+    width: '43rem',
+    top: '15.6rem',
+    left: '30rem',
+    position: 'relative',
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: 'white',
+    marginLeft: 0,
+    display: 'flex',
   },
-  title: {
-    flexGrow: 1,
-  }
+  textField: {
+    height: '4rem',
+  },
 }));
 
+const top100Films = [
+  { title: 'The Shawshank Redemption', year: 1994 },
+  { title: 'The Godfather', year: 1972 },
+  { title: 'The Godfather: Part II', year: 1974 },
+  { title: 'The Dark Knight', year: 2008 },
+]
 
 const SearchPanelView = () => {
   const classes = useStyles();
 
+  const handleChange = () => {
+    history.push('/first')
+  }
+
   return(
     <div className={classes.root}>
-      <Toolbar>
-        <Typography variant="h6" noWrap className={classes.title}>
-          <Link component={RouterLink} to="/main">
-            {/* Search Panel */}
-          </Link>
-        </Typography>
-      </Toolbar>
+        <Autocomplete
+        className={classes.search}
+        options={top100Films.map((option) => option.title)}
+        renderInput={(params) => (
+          <TextField className={classes.textField} {...params} label="Search Marketplace…" />
+        )}
+        onChange={handleChange}
+      />
     </div>
   )
 }
