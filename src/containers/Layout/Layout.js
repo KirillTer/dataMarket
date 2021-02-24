@@ -1,15 +1,15 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
-// import ProtectedRouter from "../../components/ProtectedRoute";
 import Header from "./Header/Header.connect";
 import SubHeader from "./SubHeader/SubHeader.connect";
 
 import MainView from "../main-page/Main.connect";
+import FirstPageView from "../firstPage/FirstPage.connect";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: '100rem',
+    height: '100%',
   },
   headerBlock: {
     display: 'flex',
@@ -36,6 +36,7 @@ const Layout = () => {
               <Redirect to="/main"/>
           )}/>
           <Route exact path="/main" component={MainView} />
+          <Route exact path="/first" component={FirstPageView} />
         </Switch>
       </div>
     </div>
