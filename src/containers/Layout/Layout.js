@@ -6,6 +6,7 @@ import SubHeader from "./SubHeader/SubHeader.connect";
 
 import MainView from "../main-page/Main.connect";
 import FirstPageView from "../firstPage/FirstPage.connect";
+import SearchResultView from "../searchResult/SearchResult.connect";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -37,6 +38,7 @@ const Layout = () => {
           )}/>
           <Route exact path="/main" component={MainView} />
           <Route exact path="/first" component={FirstPageView} />
+          <Route exact path="/search" component={SearchResultView} />
         </Switch>
       </div>
     </div>

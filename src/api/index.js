@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-const baseURL = 'https://localhost:4000'
+const baseURL = 'http://localhost:4000'
 
 // export const fetchMainApi = async () => {
 //   const {body} = await request.post(
