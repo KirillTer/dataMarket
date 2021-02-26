@@ -13,6 +13,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     height: '34rem',
+    backgroundColor: '#000000',
     backgroundImage: `url(${SearchImage})`,
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat'

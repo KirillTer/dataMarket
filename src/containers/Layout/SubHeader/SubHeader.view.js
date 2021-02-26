@@ -112,16 +112,16 @@ const SubHeaderView = () => {
         </Link></div>
       </div>
       <div className={classes.bottomLine}>
-        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+        <Button aria-controls="simple-menu" className={classes.bottomItem} onClick={handleClick}>
           Domains
         </Button>
-        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+        <Button aria-controls="simple-menu" className={classes.bottomItem} onClick={handleClick}>
           Brands
         </Button>
-        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+        <Button aria-controls="simple-menu" className={classes.bottomItem} onClick={handleClick}>
           Regions
         </Button>
-        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+        <Button aria-controls="simple-menu" className={classes.bottomItem} onClick={handleClick}>
           Programs
         </Button>
         <StyledMenu
@@ -132,21 +132,12 @@ const SubHeaderView = () => {
           onClose={handleClose}
         >
           <StyledMenuItem>
-            <ListItemIcon>
-              <SendIcon fontSize="small" />
-            </ListItemIcon>
             <ListItemText primary="Sent mail" />
           </StyledMenuItem>
           <StyledMenuItem>
-            <ListItemIcon>
-              <DraftsIcon fontSize="small" />
-            </ListItemIcon>
             <ListItemText primary="Drafts" />
           </StyledMenuItem>
           <StyledMenuItem>
-            <ListItemIcon>
-              <InboxIcon fontSize="small" />
-            </ListItemIcon>
             <ListItemText primary="Inbox" />
           </StyledMenuItem>
         </StyledMenu>

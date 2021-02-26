@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.2.1",
+    "@material-ui/data-grid": "^4.0.0-alpha.20",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "@types/jest": "24.0.17",
     "@types/node": "12.7.1",

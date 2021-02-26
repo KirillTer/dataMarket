@@ -11,7 +11,8 @@ const useStyles = makeStyles(theme => ({
     height: '30rem',
     width: '100%',
     backgroundImage: `url(${MainImage})`,
-    backgroundSize: 'contain'
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat'
   },
 }));
 
